@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 
 const CryptoInvestmentCalculator = () => {
@@ -23,33 +24,42 @@ const CryptoInvestmentCalculator = () => {
   }
 
   return (
-    <div>
+    <div className='grid gap-10'>
       <h1>Calculadora de Inversión en Criptomonedas</h1>
-      <label>Bitcoin:</label>
+      <div>
+
+
+      <label>Bitcoin:
+
       <input
         type='number'
         value={bitcoinAmount}
         onChange={(e) => setBitcoinAmount(parseFloat(e.target.value))}
-      />
-      <br />
+        />
+        </label>
+        </div>
+      <div>
+
       <label>
         Ethereum: $
         <input
           type='number'
           value={etherAmount}
           onChange={(e) => setEtherAmount(parseFloat(e.target.value))}
-        />
+          />
       </label>
-      <br />
+          </div>
+      <div>
+
       <label>
         Cardano: $
         <input
           type='number'
           value={cardanoAmount}
           onChange={(e) => setCardanoAmount(parseFloat(e.target.value))}
-        />
+          />
       </label>
-      <br />
+          </div>
       <button onClick={handleCalculate}>Calcular</button>
     </div>
   )
